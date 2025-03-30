@@ -1,0 +1,32 @@
+@import "./variable.css";
+@import "./base.css";
+
+@font-face {
+  font-family: "Futura PT";
+  src: url("fonts/FuturaPT.woff2") format("woff2"),
+    url("fonts/FuturaPT.woff") format("woff"),
+    url("fonts/FuturaPT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  font-size: 14px;
+  font-family: "Futura PT", sans-serif;
+}
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+}
