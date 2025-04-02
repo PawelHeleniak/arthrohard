@@ -1,15 +1,32 @@
 @import "./variable.css";
 @import "./base.css";
 
+/* Sekcje */
+@import "./sections/nav.css";
+@import "./sections/hero.css";
+@import "./sections/products.css";
+@import "./sections/effects.css";
+@import "./sections/ingredients.css";
+@import "./sections/grid.css";
+
 @font-face {
-  font-family: "Futura PT";
-  src: url("fonts/FuturaPT.woff2") format("woff2"),
-    url("fonts/FuturaPT.woff") format("woff"),
-    url("fonts/FuturaPT.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Futura-PT";
+  src: url("/assets/fonts/futura-pt/FuturaPT-Book.woff2");
+  font-weight: 400;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "Futura-PT";
+  src: url("/assets/fonts/futura-pt/FuturaPT-Medium.woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Futura-PT";
+  src: url("/assets/fonts/futura-pt/FuturaPT-Bold.woff2");
+  font-weight: 600;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -22,11 +39,22 @@ body {
   min-height: 100vh;
   color: var(--text-primary);
   background: var(--bg-primary);
-  font-size: 14px;
-  font-family: "Futura PT", sans-serif;
+  font-size: 13px;
+  font-family: "Futura-PT", sans-serif;
+  font-weight: 400;
 }
 h1,
 h2,
 h3 {
   color: var(--text-primary);
+  font-weight: 500;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 20px;
+}
+strong {
+  font-weight: 500;
 }

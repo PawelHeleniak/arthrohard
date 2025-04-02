@@ -1,0 +1,33 @@
+.section-grid {
+  padding: 125px 30px 70px 30px !important;
+}
+.grid-select {
+  border: 1px solid var(--primary);
+  width: 260px;
+  margin-bottom: 30px;
+}
+.grid-select-input {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--primary);
+  color: var(--text-secondary);
+}
+.grid-select-title,
+.grid-select-input {
+  padding: 10px;
+}
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  height: 105px;
+  background-color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
