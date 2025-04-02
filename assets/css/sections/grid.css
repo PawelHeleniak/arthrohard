@@ -5,12 +5,14 @@
   border: 1px solid var(--primary);
   width: 260px;
   margin-bottom: 30px;
+  position: relative;
 }
 .grid-select-input {
   font-size: 20px;
   font-weight: 600;
   background-color: var(--primary);
-  color: var(--text-secondary);
+  color: var(--bg-primary);
+  cursor: pointer;
 }
 .grid-select-title,
 .grid-select-input {
@@ -27,7 +29,31 @@
   align-items: center;
   width: 105px;
   height: 105px;
-  background-color: #fff;
+  background-color: #bebebe;
   font-size: 30px;
   font-weight: 500;
+  cursor: pointer;
+}
+.grid-select-options {
+  position: absolute;
+  z-index: 1;
+  left: -1px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--primary);
+}
+.grid-select-options.hidden {
+  display: none;
+}
+.grid-select-options button {
+  background-color: var(--bg-primary);
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.grid-select-options button:hover {
+  background-color: var(--bg-secondary);
 }

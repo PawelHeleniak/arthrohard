@@ -219,15 +219,32 @@
         <div class="grid-select-title">
           <h2>liczba produkltów na stronie</h2>
         </div>
-        <div class="grid-select-input">50</div>
+        <div class="grid-select-input" onclick="openPageList()">50</div>
+        <div class="grid-select-options hidden"></div>
       </div>
-      <div class="grid-list">
-        <div class="grid-item">ID: 1</div>
-        <div class="grid-item">ID: 2</div>
-      </div>
+      <div class="grid-list"></div>
     </section>
-
+    <div id="modal" class="hidden">
+      <div class="modal-content">
+        <div class="modal-content-header">
+          <div class="header-id" id="modalId"></div>
+          <button onclick="hideModal()">X</button>
+        </div>
+        <div class="modal-content-body">
+          <div class="body-name">
+            <span>Nazwa:</span>
+            <span id="modalText"></span>
+          </div>
+          <div class="body-name">
+            <span>Wartość:</span>
+            <span id="modalValue"></span>
+          </div>
+          <img id="modalImage" />
+        </div>
+      </div>
+    </div>
     <!-- JS -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/api.js"></script>
   </body>
 </html>

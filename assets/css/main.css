@@ -8,6 +8,7 @@
 @import "./sections/effects.css";
 @import "./sections/ingredients.css";
 @import "./sections/grid.css";
+@import "./sections/modal.css";
 
 @font-face {
   font-family: "Futura-PT";
