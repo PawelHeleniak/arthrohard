@@ -4,4 +4,10 @@
   --bg-primary: #f1f1f1;
   --bg-secondary: #fff;
   --primary: #ad4844;
+  --accent: #30ab4c;
+}
+@media only screen and (min-width: 1024px) {
+  :root {
+    --bg-primary: #f6f6f6;
+  }
 }

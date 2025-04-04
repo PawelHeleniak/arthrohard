@@ -57,3 +57,43 @@
 .grid-select-options button:hover {
   background-color: var(--bg-secondary);
 }
+@media only screen and (min-width: 768px) {
+  .section-grid {
+    padding-top: 120px !important;
+    z-index: 1;
+    position: relative;
+  }
+  .grid-select {
+    width: 368px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 120px;
+  }
+  .grid-select-input,
+  .grid-select-title {
+    padding: 9px;
+  }
+  .grid-select-input {
+    padding: 9px 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .grid-select-title h2 {
+    font-size: 20px;
+    width: max-content;
+  }
+  .grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(371px, 0fr));
+    gap: 34px 50px;
+    justify-content: center;
+  }
+  .grid-item {
+    font-size: 31px;
+    width: 371px;
+    height: 350px;
+  }
+}

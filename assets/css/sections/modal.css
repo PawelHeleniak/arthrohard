@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   font-size: 31px;
+  z-index: 99;
 }
 #modal.hidden {
   visibility: hidden;
@@ -29,8 +30,19 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  padding: 0 5px;
+  margin-bottom: 70px;
+}
+.modal-content-header #modalId {
+  line-height: 0.9;
+  font-weight: 500;
 }
 .modal-content-header button {
   border: none;
   background: transparent;
+  height: max-content;
+  padding: 0 !important;
+}
+.body-name span:first-child {
+  font-weight: 500;
 }

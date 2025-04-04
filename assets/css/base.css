@@ -14,7 +14,7 @@ section.section:nth-child(2n - 1) {
 }
 .section-title {
   text-align: center;
-  font-size: 20px;
+  /* font-size: 20px; */
   margin-bottom: 20px;
   background: linear-gradient(90deg, #111 0%, #b1b1b1 100%);
   background-clip: text;
@@ -36,7 +36,7 @@ section.section:nth-child(2n - 1) {
 }
 .section-subtitle.hr-title,
 .section-title.hr-title {
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 }
 .section-subtitle.hr-title::before,
 .section-title.hr-title::before {
@@ -48,4 +48,19 @@ section.section:nth-child(2n - 1) {
   height: 2px;
   width: 140px;
   transform: translateX(-50%);
+}
+@media only screen and (min-width: 1024px) {
+  .section-subtitle.hr-title::before,
+  .section-title.hr-title::before {
+    width: 128px;
+  }
+  .section-subtitle.hr-title,
+  .section-title.hr-title {
+    padding-bottom: 22px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .d-none-desktop {
+    display: none !important;
+  }
 }

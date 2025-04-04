@@ -10,17 +10,24 @@
     <header>
       <nav>
         <img class="logo" src="/assets/img/logo.svg" alt="logo Arthrohard" />
-        <button class="hamburger-btn" onclick="handleMenu()">
-          <img src="/assets/img/icons/menu.svg" alt="menu" />
-        </button>
-        <div class="hamburger-menu">
-          <div class="hamburger-menu-list">
-            <a href="">DZIAŁANIE PREPARATU</a>
-            <a href="">ZALECENIA</a>
-            <a href="">SKŁAD</a>
-            <a href="">DAWKOWANIE</a>
-            <a href="">OPINIE</a>
+        <div class="nav-mobile">
+          <button class="hamburger-btn" onclick="handleMenu()">
+            <img src="/assets/img/icons/menu.svg" alt="menu" />
+          </button>
+          <div class="hamburger-menu">
+            <div class="hamburger-menu-list">
+              <a href="">DZIAŁANIE PREPARATU</a>
+              <a href="">ZALECENIA</a>
+              <a href="">SKŁAD</a>
+              <a href="">DAWKOWANIE</a>
+              <a href="">OPINIE</a>
+            </div>
           </div>
+        </div>
+        <div class="nav-desktop">
+          <a class="nav-item">CO NAS WYRÓŻNIA</a>
+          <a class="nav-item">SKŁAD</a>
+          <a class="nav-item choose">PRODUKTY</a>
         </div>
       </nav>
       <div class="hero">
@@ -28,13 +35,16 @@
           <img src="/assets/img/hero.png" alt="Obraz produktu arthrohard" />
         </div>
         <div class="hero-content">
+          <h1 class="hero-title">ARTHRO<span>HARD</span></h1>
           <h2 class="section-title">
-            Lab-V Arthrohard Preparat na wsparcie stawów dla psa i kota
+            Lab-V Arthrohard Preparat <br />
+            na wsparcie stawów dla psa i kota
           </h2>
           <p>
             Arthrohard to dobrze przyswajalny suplement diety w formie syropu,
             stworzony z myślą o zdrowiu stawów Twojego psa lub kota.
           </p>
+          <a href="">Kup teraz</a>
         </div>
       </div>
     </header>
@@ -85,7 +95,9 @@
             aktywnością na długo. Skorzystaj z zalet Arthrohard i zobacz różnicę
             w komforcie życia swojego zwierzęcia.
           </p>
-          <img src="/assets/img/product_3.png" alt="Skuteczność" />
+          <div class="product-box-img">
+            <img src="/assets/img/product_3.png" alt="Skuteczność" />
+          </div>
         </div>
       </div>
     </section>
@@ -128,8 +140,11 @@
         </div>
         <div class="ingredients-list">
           <div class="ingredients-item">
-            <img src="./assets/img/icons/biotech.svg" alt="Ikona biotech" />
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/biotech.svg" alt="Ikona biotech" />
+            </div>
             <h3>Siarczan glukozaminy</h3>
+            <hr class="ingredients-desktop-hr" />
             <p>650 mg</p>
             <p>
               Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
@@ -141,7 +156,9 @@
             </p>
           </div>
           <div class="ingredients-item">
-            <img src="./assets/img/icons/grass.svg" alt="Ikona trawy" />
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/grass.svg" alt="Ikona trawy" />
+            </div>
             <h3>Czarci pazur</h3>
             <p>250 mg</p>
             <p>
@@ -151,7 +168,9 @@
             </p>
           </div>
           <div class="ingredients-item">
-            <img src="./assets/img/icons/biotech.svg" alt="Ikona biotech" />
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/biotech.svg" alt="Ikona biotech" />
+            </div>
             <h3>Siarczan chondroityny</h3>
             <p>300 mg</p>
             <p>
@@ -162,7 +181,9 @@
             </p>
           </div>
           <div class="ingredients-item">
-            <img src="./assets/img/icons/vitamin.svg" alt="Ikona C++" />
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/vitamin.svg" alt="Ikona C++" />
+            </div>
             <h3>Witamina C</h3>
             <p>50 mg</p>
             <p>
@@ -173,7 +194,9 @@
             </p>
           </div>
           <div class="ingredients-item">
-            <img src="./assets/img/icons/science.svg" alt="Ikona trawy" />
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/science.svg" alt="Ikona trawy" />
+            </div>
             <h3>Kwas hialuronowy</h3>
             <p>50 mg</p>
             <p>
@@ -184,7 +207,9 @@
             </p>
           </div>
           <div class="ingredients-item">
-            <img src="./assets/img/icons/device_hub.svg" alt="Ikona MSM" />
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/device_hub.svg" alt="Ikona MSM" />
+            </div>
             <h3>MSM</h3>
             <p>250 mg</p>
             <p>
@@ -194,8 +219,10 @@
               kolagenu, co przyczynia się do zdrowia chrząstki stawowej.
             </p>
           </div>
-          <div class="ingredients-item">
-            <img src="./assets/img/icons/opacity.svg" alt="Ikona trawy" />
+          <div class="ingredients-item d-none-desktop">
+            <div class="ingredients-item-icon">
+              <img src="./assets/img/icons/opacity.svg" alt="Ikona trawy" />
+            </div>
             <h3>
               Syrop glukozowo <br />
               - fruktozowy
@@ -203,23 +230,37 @@
             <p>250 mg</p>
           </div>
         </div>
-        <div class="ingredients-img">
+        <div class="ingredients-img ingredients-img-top ingredients-mobile">
           <img
-            src="./assets/img/ingredients.png"
+            src="./assets/img/ingredients_mobile.png"
             alt="Obraz butelki arthrohard"
           />
         </div>
+        <div class="ingredients-desktop">
+          <div class="ingredients-img ingredients-img-top">
+            <img
+              src="./assets/img/ingredients_desktop.png"
+              alt="Obraz butelki arthrohard"
+            />
+          </div>
+          <a href="">Kup teraz</a>
+          <div class="ingredients-img ingredients-img-bottom">
+            <img src="./assets/img/piesek_desktop.png" alt="Obraz psa" />
+          </div>
+        </div>
       </div>
-      <div class="ingredients-img ingredients-img-absolute">
+      <div class="ingredients-img ingredients-img-absolute ingredients-mobile">
         <img src="./assets/img/piesek_mobile.png" alt="Obraz psa" />
       </div>
     </section>
     <section class="section section-grid">
       <div class="grid-select">
         <div class="grid-select-title">
-          <h2>liczba produkltów na stronie</h2>
+          <h2>liczba produktów na stronie</h2>
         </div>
-        <div class="grid-select-input" onclick="openPageList()">50</div>
+        <div class="grid-select-input" onclick="openPageList()">
+          50 <img src="/assets/img/icons/vector.svg" alt="ikona strzałki" />
+        </div>
         <div class="grid-select-options hidden"></div>
       </div>
       <div class="grid-list"></div>
@@ -228,14 +269,16 @@
       <div class="modal-content">
         <div class="modal-content-header">
           <div class="header-id" id="modalId"></div>
-          <button onclick="hideModal()">X</button>
+          <button onclick="hideModal()">
+            <img src="/assets/img/icons/x.svg" alt="" srcset="" />
+          </button>
         </div>
         <div class="modal-content-body">
-          <div class="body-name">
+          <div class="body-name" style="margin-bottom: 56px">
             <span>Nazwa:</span>
             <span id="modalText"></span>
           </div>
-          <div class="body-name">
+          <div class="body-name" style="margin-bottom: 22px">
             <span>Wartość:</span>
             <span id="modalValue"></span>
           </div>
