@@ -4,6 +4,7 @@
 .grid-select {
   border: 1px solid var(--primary);
   width: 260px;
+  margin: 0 auto;
   margin-bottom: 30px;
   position: relative;
 }
@@ -14,14 +15,18 @@
   color: var(--bg-primary);
   cursor: pointer;
 }
+.grid-select-title {
+  width: 100%;
+}
 .grid-select-title,
 .grid-select-input {
   padding: 10px;
 }
 .grid-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(105px, 0fr));
   gap: 50px;
+  justify-content: center;
 }
 .grid-item {
   display: flex;

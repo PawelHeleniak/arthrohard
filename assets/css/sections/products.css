@@ -14,6 +14,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  max-width: 290px;
+  margin: 0 auto;
 }
 .product-box-img {
   position: relative;
@@ -34,6 +36,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.product-box:nth-child(2) .product-box-img {
   gap: 20px;
 }
 .product-box-item span:nth-child(1) {
@@ -76,6 +80,8 @@
   }
   .product-box {
     width: 410px;
+    max-width: initial;
+    margin: initial;
   }
   .product-box-img {
     height: 290px;
