@@ -101,4 +101,8 @@
     width: 371px;
     height: 350px;
   }
+  .grid-select-options {
+    width: 244px;
+    margin-top: 45px;
+  }
 }

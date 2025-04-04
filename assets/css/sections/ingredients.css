@@ -1,6 +1,11 @@
 section.section-ingredients {
   padding-bottom: 228px !important;
   position: relative;
+  background-image: url(/assets/img/effects/product-effect_1.svg),
+    url(/assets/img/effects/product-effect_2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: calc(0% - 4px) calc(0% + 20px),
+    calc(100% - -1px) calc(0% + 40px);
 }
 .ingredients {
   max-width: 600px;
@@ -32,6 +37,13 @@ section.section-ingredients {
   align-items: center;
   gap: 18px;
 }
+.ingredients-list .ingredients-item:nth-child(2n) {
+  background-image: url(/assets/img/effects/product-effect_1.svg),
+    url(/assets/img/effects/product-effect_2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+}
+
 .ingredients-item img {
   width: 40px;
 }
@@ -112,6 +124,10 @@ section.section-ingredients {
   }
   .ingredients-mobile {
     display: none;
+  }
+  section.section-ingredients,
+  .ingredients-list .ingredients-item {
+    background-image: none !important;
   }
 }
 @media only screen and (min-width: 1260px) {

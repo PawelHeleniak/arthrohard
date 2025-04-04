@@ -1,4 +1,5 @@
 const selectInput = document.querySelector(".grid-select-input");
+const selectInputSpan = document.querySelector(".grid-select-input span");
 const selectOptions = document.querySelector(".grid-select-options");
 let productData = [];
 let chooseProductData = {};
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.textContent = option;
     button.addEventListener("click", () => {
-      selectInput.textContent = option;
+      selectInputSpan.textContent = option;
       getData(1, option);
     });
     selectOptions.appendChild(button);

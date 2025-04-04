@@ -3,6 +3,10 @@
   flex-direction: column;
   padding: 15px;
   align-items: center;
+  padding-bottom: 64px !important;
+  background-image: url(/assets/img/effects/effect_1.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 .hero-img {
   max-width: 290px;
@@ -35,7 +39,7 @@
     padding-right: 48px;
     gap: 104px;
     align-items: flex-start;
-    padding-bottom: 4px;
+    padding-bottom: 54px !important;
   }
   .hero-content {
     max-width: 780px;
@@ -81,5 +85,11 @@
   .hero-img {
     max-width: 680px;
     margin-top: 20px;
+  }
+  .hero {
+    background-image: none;
+    background-image: url(/assets/img/effects/effect-hero-desktop_3.svg);
+    background-repeat: no-repeat;
+    background-position: right calc(100% - 107px);
   }
 }
