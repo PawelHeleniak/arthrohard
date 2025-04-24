@@ -7,7 +7,7 @@ header {
   padding: 15px;
   align-items: center;
   padding-bottom: 64px !important;
-  background-image: url(/assets/img/effects/effect_1.svg);
+  background-image: url(../../img/effects/effect_1.svg);
   background-repeat: no-repeat;
   background-position: left bottom;
 }
@@ -99,7 +99,7 @@ header {
   }
   .hero {
     background-image: none;
-    background-image: url(/assets/img/effects/effect-hero-desktop_3.svg);
+    background-image: url(../../img/effects/effect-hero-desktop_3.svg);
     background-repeat: no-repeat;
     background-position: right calc(100% - 107px);
   }

@@ -31,6 +31,8 @@
   grid-template-columns: repeat(auto-fit, minmax(105px, 0fr));
   gap: 50px;
   justify-content: center;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .grid-item {
   display: flex;

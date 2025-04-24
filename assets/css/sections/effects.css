@@ -1,7 +1,7 @@
 .section-effects {
   padding-bottom: 30px !important;
-  background-image: url(/assets/img/effects/product-effect_1.svg),
-    url(/assets/img/effects/product-effect_2.svg);
+  background-image: url(../../img/effects/product-effect_1.svg),
+    url(../../img/effects/product-effect_2.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: calc(0% - 4px) calc(0% + 20px),
     calc(100% - -1px) calc(0% + 40px);

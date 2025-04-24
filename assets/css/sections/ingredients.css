@@ -1,7 +1,7 @@
 section.section-ingredients {
   padding-bottom: 228px !important;
   position: relative;
-  background-image: url(/assets/img/effects/product-effect_1.svg),
+  background-image: url(../../img/effects/product-effect_1.svg),
     url(/assets/img/effects/product-effect_2.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: calc(0% - 4px) calc(0% + 20px),
@@ -38,8 +38,8 @@ section.section-ingredients {
   gap: 18px;
 }
 .ingredients-list .ingredients-item:nth-child(2n) {
-  background-image: url(/assets/img/effects/product-effect_1.svg),
-    url(/assets/img/effects/product-effect_2.svg);
+  background-image: url(../../img/effects/product-effect_1.svg),
+    url(../../img/effects/product-effect_2.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: left top, right top;
   z-index: 1;
@@ -207,8 +207,8 @@ section.section-ingredients {
     display: flex;
   }
   .ingredients-img-bottom {
-    background-image: url(/assets/img/piesek_desktop.png),
-      url(/assets/img/piesek_vector_1.svg), url(/assets/img/piesek_vector_2.svg);
+    background-image: url(../../img/piesek_desktop.png),
+      url(../../img/piesek_vector_1.svg), url(../../img/piesek_vector_2.svg);
 
     background-size: 944px, auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;

@@ -1,5 +1,5 @@
 .section-product {
-  background-image: url(/assets/img/effects/effect_2.svg);
+  background-image: url(../../img/effects/effect_2.svg);
   background-repeat: no-repeat;
   background-position: right calc(0% + 2px);
 }
@@ -18,8 +18,8 @@
   gap: 30px;
   max-width: 290px;
   margin: 0 auto;
-  background-image: url(/assets/img/effects/product-effect_1.svg),
-    url(/assets/img/effects/product-effect_2.svg);
+  background-image: url(../../img/effects/product-effect_1.svg),
+    url(../../img/effects/product-effect_2.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: left top, right top;
 }
@@ -156,20 +156,20 @@
     margin-top: initial !important;
   }
   .product-box:nth-child(1n) {
-    background-image: url(/assets/img/effects/section-product/vector_1.svg),
-      url(/assets/img/effects/section-product/vector_2.svg);
+    background-image: url(../../img/effects/section-product/vector_1.svg),
+      url(../../img/effects/section-product/vector_2.svg);
     background-position: calc(0% - 5px) calc(100% + -5px),
       calc(100% - 5px) calc(100% + -72px);
   }
   .product-box.product-box:nth-child(2n) {
-    background-image: url(/assets/img/effects/section-product/vector_3.svg),
-      url(/assets/img/effects/section-product/vector_4.svg);
+    background-image: url(../../img/effects/section-product/vector_3.svg),
+      url(../../img/effects/section-product/vector_4.svg);
     background-position: calc(0% - 0px) calc(100% + 0px),
       calc(100% - 47px) calc(100% + -14px);
   }
   .product-box.product-box:nth-child(3n) {
-    background-image: url(/assets/img/effects/section-product/vector_5.svg),
-      url(/assets/img/effects/section-product/vector_6.svg);
+    background-image: url(../../img/effects/section-product/vector_5.svg),
+      url(../../img/effects/section-product/vector_6.svg);
     background-position: calc(0% - 3px) calc(100% + -40px),
       calc(100% - 44px) calc(100% + -24px);
   }
@@ -203,8 +203,8 @@
     left: 0;
     width: 100%;
     height: 550px;
-    background-image: url(/assets/img/effects/effect-hero-desktop_1.svg),
-      url(/assets/img/effects/effect-hero-desktop_2.svg);
+    background-image: url(../../img/effects/effect-hero-desktop_1.svg),
+      url(../../img/effects/effect-hero-desktop_2.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right top;
     z-index: -1;
