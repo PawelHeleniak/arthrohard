@@ -5,6 +5,7 @@ const navLi = document.querySelectorAll(".nav-desktop a");
 const menu = document.querySelector(".hamburger-menu");
 const body = document.querySelector("body");
 const list = document.querySelector(".hamburger-menu-list");
+const item = document.querySelectorAll(".hamburger-menu-list a");
 
 const handleMenu = () => {
   isMenu = !isMenu;
@@ -18,6 +19,14 @@ menu.addEventListener("click", (e) => {
 
   menu.classList.remove("active");
   body.classList.remove("no-scroll");
+});
+
+item.forEach((link) => {
+  link.addEventListener("click", () => {
+    isMenu = false;
+    menu.classList.remove("active");
+    body.classList.remove("no-scroll");
+  });
 });
 
 window.addEventListener("scroll", () => {
