@@ -14,6 +14,10 @@
   background-color: var(--primary);
   color: var(--bg-primary);
   cursor: pointer;
+  transition: 0.2s ease-in background-color;
+}
+.grid-select-input:hover {
+  background-color: #973733;
 }
 .grid-select-title {
   width: 100%;
@@ -38,15 +42,22 @@
   font-size: 30px;
   font-weight: 500;
   cursor: pointer;
+  transition: 0.2s ease-in scale;
+  scale: 1;
+}
+.grid-item:hover {
+  scale: 0.95;
+  box-shadow: #555 0px 0px 6px;
 }
 .grid-select-options {
   position: absolute;
   z-index: 1;
   left: -1px;
-  width: 260px;
+  /* width: 260px; */
   display: flex;
   flex-direction: column;
   border: 1px solid var(--primary);
+  width: calc(100% + 2px);
 }
 .grid-select-options.hidden {
   display: none;
@@ -102,7 +113,7 @@
     height: 350px;
   }
   .grid-select-options {
-    width: 244px;
+    /* width: 244px; */
     margin-top: 45px;
   }
 }

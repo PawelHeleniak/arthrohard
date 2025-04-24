@@ -12,19 +12,19 @@
 
 @font-face {
   font-family: "Futura-PT";
-  src: url("/assets/fonts/futura-pt/FuturaPT-Book.woff2");
+  src: url("../fonts/futura-pt/FuturaPT-Book.woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Futura-PT";
-  src: url("/assets/fonts/futura-pt/FuturaPT-Medium.woff2");
+  src: url("../fonts/futura-pt/FuturaPT-Medium.woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Futura-PT";
-  src: url("/assets/fonts/futura-pt/FuturaPT-Bold.woff2");
+  src: url("../fonts/futura-pt/FuturaPT-Bold.woff2");
   font-weight: 600;
   font-style: normal;
 }

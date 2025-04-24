@@ -1,85 +1,99 @@
 const selectInput = document.querySelector(".grid-select-input");
-const selectInputSpan = document.querySelector(".grid-select-input span");
+const selectInputSpan = selectInput.querySelector("span");
 const selectOptions = document.querySelector(".grid-select-options");
+const gridList = document.querySelector(".grid-list");
+const scrollSection = document.getElementById("scroll-section");
+const modal = document.querySelector("#modal");
+const modalIdElem = modal.querySelector("#modalId");
+const modalTextElem = modal.querySelector("#modalText");
+const modalValueElem = modal.querySelector("#modalValue");
+const modalImageElem = modal.querySelector("#modalImage");
+
 let productData = [];
-let chooseProductData = {};
+let chosenProduct = null;
+let isLoading = false;
 let showDialog = false;
 
-async function getData(pageNumber, pageSize) {
-  const url = `https://brandstestowy.smallhost.pl/api/random?pageNumber=${pageNumber}&pageSize=${pageSize}`;
+// ===Domyślne wartości===
+let pageNumber = 1;
+let pageSize = 50;
+// ===
 
+async function fetchProducts() {
+  isLoading = true;
+  const api = `https://brandstestowy.smallhost.pl/api/random?pageNumber=${pageNumber}&pageSize=${pageSize}`;
   try {
-    const response = await fetch(url);
+    const response = await fetch(api);
+    const { data } = await response.json();
+    productData = data;
+    renderGrid(data);
+  } catch (err) {
+    console.error(err);
+  }
+  isLoading = false;
+}
 
-    const data = await response.json();
-    console.log("Dane:", data);
-    productData = data.data;
-    showData(data.data);
-  } catch (error) {
-    console.error("Błąd:", error);
+function renderGrid(items) {
+  gridList.innerHTML = "";
+  items.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "grid-item";
+    card.textContent = `ID: ${item.id}`;
+    card.addEventListener("click", () => openProductModal(item.id));
+    gridList.appendChild(card);
+  });
+}
+
+function setupPageSizeOptions() {
+  const sizes = [2, 5, 10, 25, 50];
+  sizes.forEach((size) => {
+    const btn = document.createElement("button");
+    btn.textContent = size;
+    btn.addEventListener("click", () => {
+      selectInputSpan.textContent = size;
+      pageSize = size;
+      pageNumber = 1;
+      fetchProducts();
+      selectOptions.classList.add("hidden");
+    });
+    selectOptions.appendChild(btn);
+  });
+}
+
+function togglePageSizeList() {
+  selectOptions.classList.toggle("hidden");
+}
+
+function onScroll() {
+  const { scrollY, innerHeight } = window;
+  const { scrollHeight } = document.documentElement;
+  if (!isLoading && scrollY + innerHeight > scrollHeight - 200) {
+    pageSize += Number(selectInputSpan.textContent);
+    fetchProducts();
   }
 }
-const showData = (items) => {
-  const gridList = document.querySelector(".grid-list");
-  gridList.innerHTML = "";
 
-  items.forEach((item) => {
-    const div = document.createElement("div");
-    div.classList.add("grid-item");
-    div.textContent = `ID: ${item.id}`;
-    div.addEventListener("click", () => getItem(item.id));
-    gridList.appendChild(div);
-  });
-};
-getData(1, 10);
-
-const openPageList = () => {
-  const selectInput = document.querySelector(".grid-select-options");
-  const isOpen = selectInput.classList.contains("hidden");
-
-  if (selectInput) selectInput.classList.toggle("hidden", !isOpen);
-};
-document.addEventListener("DOMContentLoaded", () => {
-  const options = [2, 5, 10, 25, 50];
-
-  options.forEach((option) => {
-    const button = document.createElement("button");
-
-    button.textContent = option;
-    button.addEventListener("click", () => {
-      selectInputSpan.textContent = option;
-      getData(1, option);
-    });
-    selectOptions.appendChild(button);
-  });
-});
-const getItem = (id) => {
-  chooseProductData = productData.filter((obj) => obj.id === id);
-  if (chooseProductData) showModal();
-};
-
-const showModal = () => {
-  let modalId = document.getElementById("modalId");
-  let modalText = document.getElementById("modalText");
-  let modalValue = document.getElementById("modalValue");
-  let modalImage = document.getElementById("modalImage");
-
-  const data = { ...chooseProductData };
-  console.log(data);
-
-  modalId.textContent = data[0].id || "0";
-  modalText.textContent = data[0].text || "Brak nazwy";
-  modalValue.textContent = data[0].image || "Brak wartości";
-  modalImage.src = data[0].image || "";
-  modalImage.alt = "Obraz produktu";
-
+function openProductModal(id) {
+  chosenProduct = productData.find((p) => p.id === id);
+  if (!chosenProduct) return;
+  modalIdElem.textContent = chosenProduct.id || "0";
+  modalTextElem.textContent = chosenProduct.text || "Brak nazwy";
+  modalValueElem.textContent = chosenProduct.image || "Brak wartości";
+  modalImageElem.src = chosenProduct.image || "";
+  modalImageElem.alt = "Obraz produktu";
   showDialog = true;
-  console.log(document.querySelector("#modal"));
+  modal.classList.remove("hidden");
+}
 
-  document.querySelector("#modal").classList.remove("hidden");
-};
-
-const hideModal = () => {
+function closeModal() {
   showDialog = false;
-  document.querySelector("#modal").classList.add("hidden");
-};
+  modal.classList.add("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupPageSizeOptions();
+  fetchProducts();
+  window.addEventListener("scroll", onScroll);
+  selectInput.addEventListener("click", togglePageSizeList);
+  modal.querySelector(".close-btn").addEventListener("click", closeModal);
+});

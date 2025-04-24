@@ -109,9 +109,9 @@
   .product-box-item {
     font-size: 20px;
   }
-  .product-box-item {
+  /* .product-box-item {
     gap: 0;
-  }
+  } */
   .product-box-list {
     align-items: flex-start;
     margin-left: 45px;
