@@ -16,18 +16,22 @@
           </button>
           <div class="hamburger-menu">
             <div class="hamburger-menu-list">
-              <a href="">DZIAŁANIE PREPARATU</a>
+              <a href="#dzialanie">DZIAŁANIE PREPARATU</a>
               <a href="">ZALECENIA</a>
-              <a href="">SKŁAD</a>
+              <a href="#sklad">SKŁAD</a>
               <a href="">DAWKOWANIE</a>
               <a href="">OPINIE</a>
             </div>
           </div>
         </div>
         <div class="nav-desktop">
-          <a class="nav-item">CO NAS WYRÓŻNIA</a>
-          <a class="nav-item">SKŁAD</a>
-          <a class="nav-item choose">PRODUKTY</a>
+          <a
+            class="nav-item co-wyroznia-nasz-preparat"
+            href="#co-wyroznia-nasz-preparat"
+            >CO NAS WYRÓŻNIA</a
+          >
+          <a class="nav-item sklad" href="#sklad">SKŁAD</a>
+          <a class="nav-item produkty" href="#produkty">PRODUKTY</a>
         </div>
       </nav>
       <div class="hero">
@@ -48,7 +52,7 @@
         </div>
       </div>
     </header>
-    <section class="section section-product">
+    <section class="section section-product" id="co-wyroznia-nasz-preparat">
       <h2 class="section-title hr-title">Co wyróżnia nasz preparat</h2>
       <div class="product">
         <div class="product-box">
@@ -64,7 +68,6 @@
           </p>
           <div class="product-box-img first flex-column">
             <img src="./assets/img/product_1.png" alt="Innowacyjny dodatek" />
-            <hr />
           </div>
         </div>
         <div class="product-box">
@@ -101,7 +104,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-effects">
+    <section class="section section-effects" id="dzialanie">
       <h2 class="section-title hr-title">Działanie preparatu</h2>
       <div class="effects">
         <div class="effects-list">
@@ -131,7 +134,7 @@
       </div>
     </section>
     <section class="section section-space"></section>
-    <section class="section section-ingredients">
+    <section class="section section-ingredients" id="sklad">
       <h2 class="section-title hr-title">Skład w 5 ml</h2>
       <div class="ingredients">
         <div class="ingredients-subtitle">
@@ -144,7 +147,7 @@
               <img src="./assets/img/icons/biotech.svg" alt="Ikona biotech" />
             </div>
             <h3>Siarczan glukozaminy</h3>
-            <hr class="ingredients-desktop-hr" />
+            <!-- <hr class="ingredients-desktop-hr" /> -->
             <p>650 mg</p>
             <p>
               Glukozamina jest naturalnym składnikiem chrząstki. Dodatek
@@ -253,12 +256,12 @@
         <img src="./assets/img/piesek_mobile.png" alt="Obraz psa" />
       </div>
     </section>
-    <section class="section section-grid" id="scroll-section">
+    <section class="section section-grid" id="produkty">
       <div class="grid-select">
         <div class="grid-select-title">
           <h2>liczba produktów na stronie</h2>
         </div>
-        <div class="grid-select-input" onclick="openPageList()">
+        <div class="grid-select-input">
           <span>50</span>
           <img src="./assets/img/icons/vector.svg" alt="ikona strzałki" />
         </div>

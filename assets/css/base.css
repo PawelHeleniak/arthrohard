@@ -4,6 +4,7 @@ button {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: var(--text-primary);
 }
 section.section {
   padding: 70px 15px;
@@ -62,5 +63,22 @@ section.section:nth-child(2n - 1) {
 @media only screen and (min-width: 1024px) {
   .d-none-desktop {
     display: none !important;
+  }
+}
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+#co-wyroznia-nasz-preparat,
+#sklad,
+#produkty {
+  scroll-margin-top: 46px;
+}
+@media only screen and (min-width: 768px) {
+  #co-wyroznia-nasz-preparat,
+  #sklad,
+  #produkty {
+    scroll-margin-top: 120px;
   }
 }

@@ -46,3 +46,6 @@
 .body-name span:first-child {
   font-weight: 500;
 }
+.modal-content span {
+  word-wrap: break-word;
+}

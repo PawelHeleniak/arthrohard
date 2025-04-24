@@ -73,6 +73,9 @@
 .grid-select-options button:hover {
   background-color: var(--bg-secondary);
 }
+.grid-select:not(:has(.grid-select-options.hidden)) .grid-select-input img {
+  rotate: 180deg;
+}
 @media only screen and (min-width: 768px) {
   .section-grid {
     padding-top: 120px !important;

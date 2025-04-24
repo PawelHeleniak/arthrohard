@@ -2,8 +2,10 @@ const selectInput = document.querySelector(".grid-select-input");
 const selectInputSpan = selectInput.querySelector("span");
 const selectOptions = document.querySelector(".grid-select-options");
 const gridList = document.querySelector(".grid-list");
-const scrollSection = document.getElementById("scroll-section");
+const scrollSection = document.getElementById("produkty");
 const modal = document.querySelector("#modal");
+const modalBox = document.querySelector("#modal .modal-content");
+const modalBoxBtn = document.querySelector("#modal .modal-content button");
 const modalIdElem = modal.querySelector("#modalId");
 const modalTextElem = modal.querySelector("#modalText");
 const modalValueElem = modal.querySelector("#modalValue");
@@ -64,6 +66,12 @@ function togglePageSizeList() {
   selectOptions.classList.toggle("hidden");
 }
 
+document.addEventListener("click", (e) => {
+  if (!selectOptions.classList.contains("hidden"))
+    if (!selectOptions.contains(e.target) && !selectInput.contains(e.target))
+      selectOptions.classList.add("hidden");
+});
+
 function onScroll() {
   const { scrollY, innerHeight } = window;
   const { scrollHeight } = document.documentElement;
@@ -83,12 +91,20 @@ function openProductModal(id) {
   modalImageElem.alt = "Obraz produktu";
   showDialog = true;
   modal.classList.remove("hidden");
+  body.classList.add("no-scroll");
 }
 
 function closeModal() {
   showDialog = false;
   modal.classList.add("hidden");
+  body.classList.remove("no-scroll");
 }
+
+modal.addEventListener("click", (e) => {
+  if (modalBox.contains(e.target) && !modalBoxBtn.contains(e.target)) return;
+  modal.classList.add("hidden");
+  body.classList.remove("no-scroll");
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   setupPageSizeOptions();

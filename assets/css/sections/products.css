@@ -66,6 +66,23 @@
 .last {
   margin-top: 11px !important;
 }
+.product-box {
+  position: relative;
+}
+.product-box::after {
+  content: "";
+  width: 290px;
+  height: 2px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transition: 0.2s ease-in background;
+  transform: translateX(-50%);
+}
+.product-box:hover::after {
+  background-color: #111;
+}
 @media only screen and (min-width: 768px) {
   .section-product {
     padding-bottom: 104px !important;
@@ -112,6 +129,10 @@
   /* .product-box-item {
     gap: 0;
   } */
+  .product-box::after {
+    width: 360px;
+    bottom: -25px !important;
+  }
   .product-box-list {
     align-items: flex-start;
     margin-left: 45px;
@@ -122,12 +143,6 @@
   }
   .last {
     margin-top: initial !important;
-  }
-  .product-box-img hr {
-    position: absolute;
-    bottom: -25px;
-    width: 100%;
-    margin-top: 0;
   }
   .section-product {
     background-image: url(/assets/img/effects/effect-hero-desktop_1.svg),
