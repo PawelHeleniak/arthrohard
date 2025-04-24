@@ -90,6 +90,9 @@ header {
     padding: 10px 40px;
     width: max-content;
   }
+  .hero-content a:hover {
+    background-color: #2f9346;
+  }
   .hero-img {
     max-width: 680px;
     margin-top: 20px;
@@ -99,5 +102,10 @@ header {
     background-image: url(/assets/img/effects/effect-hero-desktop_3.svg);
     background-repeat: no-repeat;
     background-position: right calc(100% - 107px);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero {
+    min-height: 800px;
   }
 }

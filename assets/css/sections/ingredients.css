@@ -42,6 +42,7 @@ section.section-ingredients {
     url(/assets/img/effects/product-effect_2.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: left top, right top;
+  z-index: 1;
 }
 
 .ingredients-item img {
@@ -62,6 +63,7 @@ section.section-ingredients {
 /* .ingredients-desktop-hr {
   display: none;
 } */
+.ingredients-img-bottom,
 .ingredients-desktop {
   display: none;
 }
@@ -145,17 +147,17 @@ section.section-ingredients {
   .ingredients-list .ingredients-item:nth-child(6) {
     margin-top: 48px;
   }
-  .ingredients-mobile {
-    display: none;
-  }
   section.section-ingredients,
   .ingredients-list .ingredients-item {
     background-image: none !important;
   }
 }
 @media only screen and (min-width: 1260px) {
+  .ingredients-mobile {
+    display: none;
+  }
   section.section-ingredients {
-    padding-bottom: 535px !important;
+    padding-bottom: 0 !important;
   }
   .ingredients-list {
     gap: 25px 300px;
@@ -174,6 +176,9 @@ section.section-ingredients {
     position: relative;
     margin-right: 93px;
   }
+  .ingredients-desktop a:hover {
+    background-color: #973733;
+  }
   .ingredients-desktop {
     display: flex;
     flex-direction: column;
@@ -181,18 +186,37 @@ section.section-ingredients {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -673px;
+    /* bottom: -673px; */
+    top: 356px;
     max-width: 800px;
     width: 100%;
     margin-left: 46px;
+    height: 1240px;
+    overflow: hidden;
   }
   .ingredients-desktop .ingredients-img img {
     max-width: 100%;
   }
-  .ingredients-desktop .ingredients-img-bottom {
+  /* .ingredients-desktop .ingredients-img-bottom {
     bottom: 668px;
     position: relative;
     width: 944px;
     margin-right: 100px;
+  } */
+  .ingredients-img-bottom {
+    display: flex;
+  }
+  .ingredients-img-bottom {
+    background-image: url(/assets/img/piesek_desktop.png),
+      url(/assets/img/piesek_vector_1.svg), url(/assets/img/piesek_vector_2.svg);
+
+    background-size: 944px, auto, auto;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    background-position: calc(50% - 4px) calc(50% + 32px),
+      calc(50% - 200px) bottom, calc(50% + 290px) calc(100% - 50px);
+    background-attachment: scroll, fixed, fixed;
+
+    min-height: 558px;
   }
 }

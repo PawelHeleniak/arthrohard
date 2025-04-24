@@ -83,6 +83,9 @@
 .product-box:hover::after {
   background-color: #111;
 }
+.product-box:nth-child(1) {
+  margin-bottom: 23px;
+}
 @media only screen and (min-width: 768px) {
   .section-product {
     padding-bottom: 104px !important;
@@ -94,8 +97,8 @@
     justify-items: center;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(410px, 0fr));
-    gap: 157px;
+    grid-template-columns: repeat(auto-fit, minmax(490px, 0fr));
+    gap: 76px;
     justify-content: center;
     margin-left: 4px;
   }
@@ -103,7 +106,7 @@
     margin-bottom: -2px !important;
   }
   .product-box {
-    width: 410px;
+    width: 490px;
     max-width: initial;
     margin: initial;
   }
@@ -122,6 +125,11 @@
   .product-box p {
     margin-bottom: 20px;
   }
+  .product-box p {
+    width: 410px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
   .product-box p,
   .product-box-item {
     font-size: 20px;
@@ -133,9 +141,12 @@
     width: 360px;
     bottom: -25px !important;
   }
+  .product-box:nth-child(1) {
+    margin-bottom: initial;
+  }
   .product-box-list {
     align-items: flex-start;
-    margin-left: 45px;
+    margin-left: 85px;
   }
   .product-box-item span:nth-child(1) {
     width: 45px;
@@ -144,20 +155,59 @@
   .last {
     margin-top: initial !important;
   }
-  .section-product {
+  .product-box:nth-child(1n) {
+    background-image: url(/assets/img/effects/section-product/vector_1.svg),
+      url(/assets/img/effects/section-product/vector_2.svg);
+    background-position: calc(0% - 5px) calc(100% + -5px),
+      calc(100% - 5px) calc(100% + -72px);
+  }
+  .product-box.product-box:nth-child(2n) {
+    background-image: url(/assets/img/effects/section-product/vector_3.svg),
+      url(/assets/img/effects/section-product/vector_4.svg);
+    background-position: calc(0% - 0px) calc(100% + 0px),
+      calc(100% - 47px) calc(100% + -14px);
+  }
+  .product-box.product-box:nth-child(3n) {
+    background-image: url(/assets/img/effects/section-product/vector_5.svg),
+      url(/assets/img/effects/section-product/vector_6.svg);
+    background-position: calc(0% - 3px) calc(100% + -40px),
+      calc(100% - 44px) calc(100% + -24px);
+  }
+  /* .product {
+    background-image: url(/assets/img/effects/vector-ing-desktop_1.svg);
+    background-repeat: repeat-x;
+    background-size: 300px 200px;
+    background-position: left bottom;
+  } */
+}
+@media only screen and (min-width: 1280px) {
+  /* .section-product {
     background-image: url(/assets/img/effects/effect-hero-desktop_1.svg),
       url(/assets/img/effects/effect-hero-desktop_2.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: calc(0% - 0px) calc(0% + -130px),
       calc(100% - 0px) calc(0% + -190px);
-  }
-  .product-box {
+  } */
+  .section-product {
     background-image: none;
   }
-  .product {
-    background-image: url(/assets/img/effects/vector-ing-desktop_1.svg);
-    background-repeat: repeat-x;
-    background-size: 300px 200px;
-    background-position: left bottom;
+  .section-product {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-product::before {
+    content: "";
+    position: absolute;
+    top: -130px;
+    left: 0;
+    width: 100%;
+    height: 550px;
+    background-image: url(/assets/img/effects/effect-hero-desktop_1.svg),
+      url(/assets/img/effects/effect-hero-desktop_2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right top;
+    z-index: -1;
+    pointer-events: none;
   }
 }
