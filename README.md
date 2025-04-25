@@ -11,6 +11,5 @@
 
 ## Klonowanie
 
-1. Pobierz repozytorium:
    ```bash
    git clone https://github.com/PawelHeleniak/arthrohard.git
