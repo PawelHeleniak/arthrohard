@@ -98,6 +98,7 @@ section.section-ingredients {
     gap: 25px;
     justify-items: center;
     margin-left: -15px;
+    margin-bottom: 35px;
   }
   .ingredients-item {
     width: 415px;
@@ -153,8 +154,11 @@ section.section-ingredients {
     transform: scaleX(0);
     transform-origin: bottom left;
   }
-  .ingredients-item:hover h3 {
+  /* .ingredients-item:hover h3 {
     margin-bottom: 22px;
+  } */
+  .ingredients-item h3 {
+    margin-bottom: 12px;
   }
   .ingredients-item:hover h3::after {
     /* transform: translateX(0); */
