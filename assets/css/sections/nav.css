@@ -114,12 +114,12 @@ nav button:hover {
     transform: scaleX(0);
     transform-origin: bottom left;
   }
-
+  .nav-item.choose::after,
   .nav-item:hover::after {
     /* transform: translateX(0); */
     transform: scaleX(100%);
   }
-  .nav-item.choose {
+  .nav-item.produkty {
     font-weight: bold;
   }
 }

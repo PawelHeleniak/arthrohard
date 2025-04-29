@@ -27,8 +27,8 @@ async function fetchProducts() {
   try {
     const response = await fetch(api);
     const { data } = await response.json();
-    productData = data;
-    renderGrid(data);
+    productData = [...productData, ...data];
+    renderGrid(productData);
   } catch (err) {
     console.error(err);
   }
@@ -55,6 +55,8 @@ function setupPageSizeOptions() {
       selectInputSpan.textContent = size;
       pageSize = size;
       pageNumber = 1;
+      productData = [];
+      gridList.innerHTML = "";
       fetchProducts();
       selectOptions.classList.add("hidden");
     });
@@ -76,7 +78,10 @@ function onScroll() {
   const { scrollY, innerHeight } = window;
   const { scrollHeight } = document.documentElement;
   if (!isLoading && scrollY + innerHeight > scrollHeight - 200) {
-    pageSize += Number(selectInputSpan.textContent);
+    // pageSize += Number(selectInputSpan.textContent);
+    pageNumber++;
+    console.log(pageNumber);
+
     fetchProducts();
   }
 }
