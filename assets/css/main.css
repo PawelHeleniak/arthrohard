@@ -28,6 +28,9 @@
   font-weight: 600;
   font-style: normal;
 }
+* {
+  scroll-behavior: smooth;
+}
 *,
 *::before,
 *::after {

@@ -67,6 +67,23 @@ section.section-ingredients {
 .ingredients-desktop {
   display: none;
 }
+.ingredients-img-absolute {
+  height: 227px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url(../../img/piesek_mobile.png),
+    url(../../img/piesek-mobile_vector_1.svg),
+    url(../../img/piesek-mobile_vector_2.svg);
+  background-size: auto, auto, auto;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* background-position: center bottom, left 5px bottom 150px, right bottom 150px; */
+
+  background-position: center bottom, calc(50% - 90px) calc(100% - 150px),
+    calc(50% + 120px) calc(100% - 150px);
+  background-attachment: scroll, fixed, fixed;
+}
 @media only screen and (min-width: 1024px) {
   .ingredients {
     margin: initial;
