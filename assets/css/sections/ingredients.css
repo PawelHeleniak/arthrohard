@@ -50,7 +50,7 @@ section.section-ingredients {
 }
 .ingredients-img img {
   width: 100%;
-  max-width: 290px;
+  max-width: 360px;
 }
 .ingredients-img-absolute img {
   width: 100%;
@@ -60,9 +60,9 @@ section.section-ingredients {
   position: absolute;
   bottom: 0;
 }
-/* .ingredients-desktop-hr {
-  display: none;
-} */
+.ingredients-img-top {
+  margin-top: 70px;
+}
 .ingredients-img-bottom,
 .ingredients-desktop {
   display: none;
@@ -100,7 +100,8 @@ section.section-ingredients {
     margin-bottom: 35px;
   }
   .ingredients-item {
-    width: 415px;
+    width: 100%;
+    max-width: 415px;
     justify-content: flex-start;
   }
   .ingredients-subtitle {
@@ -179,8 +180,31 @@ section.section-ingredients {
   section.section-ingredients {
     padding-bottom: 0 !important;
   }
+  .ingredients-img-top {
+    margin-top: -45px;
+    position: relative;
+  }
   .ingredients-list {
-    gap: 25px 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    width: fit-content;
+  }
+  .ingredients-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .ingredients-list .ingredients-wrap:nth-child(1) {
+    align-items: end;
+  }
+  .ingredients-list .ingredients-wrap:nth-child(3) {
+    align-items: start;
+  }
+  .ingredients-item {
+    height: 413px;
   }
   .ingredients-desktop a {
     display: flex;
@@ -192,9 +216,9 @@ section.section-ingredients {
     color: var(--bg-primary);
     padding: 10px 40px;
     width: max-content;
-    bottom: 824px;
+    bottom: clamp(72px, 8vw, 128px);
     position: relative;
-    margin-right: 93px;
+    z-index: 2;
   }
   .ingredients-desktop a:hover {
     background-color: #973733;
@@ -203,28 +227,33 @@ section.section-ingredients {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    /* bottom: -673px; */
-    top: 356px;
-    max-width: 800px;
+    /* max-width: 800px; */
     width: 100%;
-    margin-left: 46px;
-    height: 1240px;
-    overflow: hidden;
   }
   .ingredients-desktop .ingredients-img img {
     max-width: 100%;
   }
-  /* .ingredients-desktop .ingredients-img-bottom {
-    bottom: 668px;
-    position: relative;
-    width: 944px;
-    margin-right: 100px;
-  } */
   .ingredients-img-bottom {
     display: flex;
+  }
+  .ingredients-img-top img {
+    z-index: 1;
+    position: relative;
+  }
+  .ingredients-img-top img.ingredients-img-top-vector {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+  }
+  .ingredients-img-top img.ingredients-img-top-vector_left {
+    left: -19px;
+    bottom: 25%;
+    width: clamp(160px, 13vw, 242px);
+  }
+  .ingredients-img-top img.ingredients-img-top-vector_right {
+    right: -14px;
+    top: 29%;
+    width: clamp(140px, 13vw, 196px);
   }
   .ingredients-img-bottom {
     background-image: url(../../img/piesek_desktop.png),
@@ -233,10 +262,11 @@ section.section-ingredients {
     background-size: 944px, auto, auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
 
-    background-position: calc(50% - 4px) calc(50% + 32px),
+    background-position: calc(50% - 4px) calc(50% + 16px),
       calc(50% - 200px) bottom, calc(50% + 290px) calc(100% - 50px);
     background-attachment: scroll, fixed, fixed;
 
-    min-height: 558px;
+    min-height: 524px;
+    width: 100%;
   }
 }
