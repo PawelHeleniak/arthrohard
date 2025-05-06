@@ -30,24 +30,27 @@ item.forEach((link) => {
 });
 
 window.addEventListener("scroll", () => {
-  let currentSections = "";
+  const scrollPosition = window.scrollY;
 
   const visibleSections = Array.from(sections).filter((section) => {
     return window.getComputedStyle(section).display !== "none";
   });
 
+  let currentSectionId = "";
+
   visibleSections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight / 6) {
-      currentSections = section.getAttribute("id");
-    }
+    const sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollPosition >= sectionTop - 120 && scrollPosition < sectionBottom)
+      currentSectionId = section.getAttribute("id");
   });
 
-  navLi.forEach((li) => {
-    li.classList.remove("choose");
-    if (li.classList.contains(currentSections)) {
-      li.classList.add("choose");
-    }
+  navLi.forEach((link) => {
+    const dataId = link.getAttribute("data-id");
+
+    if (dataId === currentSectionId) link.classList.add("choose");
+    else link.classList.remove("choose");
   });
 });

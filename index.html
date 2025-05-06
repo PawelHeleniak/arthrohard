@@ -9,7 +9,9 @@
   <body>
     <header>
       <nav>
-        <img class="logo" src="./assets/img/logo.svg" alt="logo Arthrohard" />
+        <a class="logo-href" href="index.html">
+          <img class="logo" src="./assets/img/logo.svg" alt="logo Arthrohard" />
+        </a>
         <div class="nav-mobile">
           <button class="hamburger-btn" onclick="handleMenu()">
             <img src="./assets/img/icons/menu.svg" alt="menu" />
@@ -25,12 +27,15 @@
         </div>
         <div class="nav-desktop">
           <a
-            class="nav-item co-wyroznia-nasz-preparat"
+            class="nav-item"
+            data-id="co-wyroznia-nasz-preparat"
             href="#co-wyroznia-nasz-preparat"
             >CO NAS WYRÓŻNIA</a
           >
-          <a class="nav-item sklad" href="#sklad">SKŁAD</a>
-          <a class="nav-item produkty" href="#produkty">PRODUKTY</a>
+          <a class="nav-item" data-id="sklad" href="#sklad">SKŁAD</a>
+          <a class="nav-item produkty" data-id="produkty" href="#produkty"
+            >PRODUKTY</a
+          >
         </div>
       </nav>
       <div class="hero">

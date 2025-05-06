@@ -13,7 +13,7 @@ nav {
 }
 nav img.logo {
   height: 12px;
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
 }
 nav button {
   background-color: transparent;
@@ -131,6 +131,12 @@ nav button:hover {
     height: 30px;
     position: absolute;
     left: 245px;
+    margin-bottom: initial;
+  }
+  .logo-href {
+    height: 30px;
+    position: absolute;
+    left: 0;
     margin-bottom: initial;
   }
 }
